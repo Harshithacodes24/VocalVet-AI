@@ -1,0 +1,8 @@
+streamlit
+librosa
+numpy
+pandas
+joblib
+gtts
+reportlab
+scikit-learn
