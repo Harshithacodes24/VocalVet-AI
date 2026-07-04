@@ -167,8 +167,6 @@ streamlit run app.py
 
 Computer Science Engineering Student
 
-GitHub: https://github.com/Harshithacodes24
-
 ---
 
 ## 📄 License
