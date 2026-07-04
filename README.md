@@ -1,69 +1,176 @@
-🐄 VocalVet AI
-Bio-Acoustic Cattle Health Monitoring System
-VocalVet AI is a real-time cattle health monitoring system that analyzes cow vocal sounds using bio-acoustic signal processing and anomaly detection to identify potential respiratory risks.
+# 🐄 VocalVet AI
 
-🚀 Problem Statement
-Respiratory diseases in cattle often go undetected in early stages due to lack of affordable diagnostic tools in rural areas. Late detection leads to:
-Reduced milk yield
-Increased mortality
-Economic loss for farmers
-VocalVet AI transforms a smartphone into a digital acoustic health monitor.
+## 📌 Overview
 
-🧠 How It Works
-Cow sound is recorded or uploaded
-Acoustic features are extracted using signal processing
-Features are analyzed using Isolation Forest (Anomaly Detection)
-Risk level is determined
-Voice feedback is provided in local language
-Doctor-ready PDF report can be downloaded
+VocalVet AI is an AI-powered bio-acoustic cattle health monitoring system that assists farmers and veterinarians in assessing cattle health using breathing sounds. The application analyzes recorded or uploaded cow audio, predicts health conditions using Machine Learning, provides multilingual voice feedback, generates downloadable doctor reports, and maintains health records for each cow.
 
-🎧 Feature Extraction
-The system extracts:
-MFCC (Mel Frequency Cepstral Coefficients)
-Zero Crossing Rate
-RMS Energy
-Spectral Centroid
-Spectral Bandwidth
-Spectral Rolloff
-These features convert raw audio into structured acoustic fingerprints.
+The system aims to support early disease detection through non-invasive audio analysis, making cattle healthcare more accessible and efficient.
 
-🤖 Model Used
-Isolation Forest (Unsupervised Anomaly Detection)
-Why?
-No labeled disease dataset available
-Trained on baseline healthy vocal patterns
-Detects acoustic deviations
+---
 
-🌍 Multilingual Support
-Supports:
-English
-Hindi
-Kannada
-Tamil
-Telugu
-Punjabi
-Includes voice output using Text-to-Speech.
+## ✨ Features
 
-📄 Doctor Report
-Generates downloadable PDF including:
-Cow ID
-Date
-Time
-Health Status
-Clinical Recommendation
-Can be shared directly with veterinarians.
+- 🐄 Add and manage multiple cattle profiles
+- 🎙️ Record live cow breathing sounds
+- 📁 Upload WAV audio recordings
+- 🤖 AI-powered cattle health prediction
+- 🌍 Multilingual interface (English, Hindi, Kannada, Tamil, Telugu, Punjabi)
+- 🔊 Voice feedback using Google Text-to-Speech (gTTS)
+- 📄 Download AI-generated doctor reports in PDF format
+- 📊 Maintain cow-wise health history
+- 💾 Automatic record storage
+- 🎨 Modern interactive Streamlit interface
 
-🛠 Tech Stack
-Streamlit (Frontend)
-Librosa (Signal Processing)
-Scikit-learn (Isolation Forest)
-gTTS (Voice Output)
-ReportLab (PDF Generation)
-Pandas (History Tracking)
+---
 
-▶️ How to Run
+## 🛠️ Technologies Used
+
+- Python
+- Streamlit
+- Scikit-learn
+- Joblib
+- Librosa
+- NumPy
+- Pandas
+- Google Text-to-Speech (gTTS)
+- ReportLab
+- Machine Learning
+- MFCC (Mel-Frequency Cepstral Coefficients)
+
+---
+
+## ⚙️ How It Works
+
+1. Add or select a cow profile.
+2. Record the cow's breathing sound or upload a WAV audio file.
+3. Extract MFCC audio features using Librosa.
+4. Analyze the audio using a trained Machine Learning model.
+5. Display the predicted health status.
+6. Generate multilingual voice feedback.
+7. Save the diagnosis to the cow's health history.
+8. Generate and download a PDF doctor report.
+
+---
+
+## 📂 Project Structure
+
+```text
+VocalVet-AI/
+│
+├── app.py
+├── model.pkl
+├── cows/
+│   ├── cow1.csv
+│   ├── cow2.csv
+│   └── ...
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── screenshots/
+    ├── home.png
+    ├── prediction.png
+    ├── report.png
+    └── history.png
+```
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+![Home](screenshots/home.png)
+
+---
+
+### 🤖 AI Health Prediction
+
+![Prediction](screenshots/analysis.png)
+
+---
+
+### 📄 Doctor Report
+
+![Doctor Report](screenshots/report.png)
+
+---
+
+## 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/your-username/VocalVet-AI.git
+```
+
+Navigate to the project directory
+
+```bash
+cd VocalVet-AI
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
-python -m streamlit run app.py
-⚠️ Disclaimer
+```
 
-This system is a research prototype developed for hackathon purposes and is not a replacement for clinical veterinary diagnosis.
+Run the application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📋 Requirements
+
+- Python 3.10+
+- Streamlit
+- Librosa
+- Scikit-learn
+- Joblib
+- NumPy
+- Pandas
+- ReportLab
+- gTTS
+
+---
+
+## 🎯 Applications
+
+- Smart dairy farms
+- Veterinary clinics
+- Livestock monitoring
+- Early disease detection
+- Precision agriculture
+- AI-assisted cattle healthcare
+
+---
+
+## 🔮 Future Enhancements
+
+- Deep Learning-based disease classification
+- Real-time respiratory disease detection
+- Mobile application support
+- IoT sensor integration
+- Cloud-based cattle health records
+- Veterinary appointment scheduling
+- Breed-specific disease prediction
+- Disease probability score with confidence percentage
+
+---
+
+## 👩‍💻 Author
+
+** C Harshitha **
+
+Computer Science Engineering Student
+
+GitHub: https://github.com/Harshithacodes24
+
+---
+
+## 📄 License
+
+This project is developed for educational and research purposes.
